@@ -23,4 +23,4 @@ jobs:
         run: dart --version
 
       - name: Run Assignment 1 Problem 1
-        run: dart run Assignment1/problem1.dart
+  	run: echo "25" | dart run Assignment1/problem1.dart
