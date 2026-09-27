@@ -1,0 +1,26 @@
+name: Run Dart Assignment
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  run-dart:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Dart
+        uses: dart-lang/setup-dart@v1
+
+      - name: Check Dart version
+        run: dart --version
+
+      - name: Run Assignment 1 Problem 1
+        run: dart run Assignment1/problem1.dart
